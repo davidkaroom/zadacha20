@@ -1,0 +1,177 @@
+object Form1: TForm1
+  Left = 388
+  Height = 426
+  Top = 127
+  Width = 807
+  Caption = 'Prograssia.exe'
+  ClientHeight = 406
+  ClientWidth = 807
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.0.0.4'
+  object Podskazka: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = VA
+    Left = 10
+    Height = 21
+    Top = 8
+    Width = 36
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 10
+    BorderSpacing.Right = 10
+    Caption = 'a = '
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Podskazka1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = VD
+    Left = 10
+    Height = 23
+    Top = 40
+    Width = 32
+    BorderSpacing.Left = 10
+    BorderSpacing.Right = 10
+    Caption = 'd = '
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Constantia'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Podskazka2: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = VN
+    Left = 10
+    Height = 21
+    Top = 72
+    Width = 32
+    BorderSpacing.Left = 10
+    BorderSpacing.Right = 10
+    Caption = 'n = '
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object VA: TEdit
+    Left = 56
+    Height = 23
+    Top = 10
+    Width = 80
+    TabOrder = 0
+  end
+  object VD: TEdit
+    Left = 56
+    Height = 23
+    Top = 40
+    Width = 80
+    TabOrder = 1
+  end
+  object VN: TEdit
+    Left = 56
+    Height = 23
+    Top = 72
+    Width = 80
+    TabOrder = 2
+  end
+  object Memo1: TMemo
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 168
+    Height = 284
+    Top = 112
+    Width = 629
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Right = 10
+    BorderSpacing.Bottom = 10
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 3
+  end
+  object Podskazka3: TLabel
+    Left = 320
+    Height = 65
+    Top = 24
+    Width = 348
+    Caption = 'Результаты:'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -48
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 10
+    Height = 20
+    Top = 376
+    Width = 139
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Left = 10
+    BorderSpacing.Bottom = 10
+    Caption = 'Рассчитать'
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+  object MainMenu1: TMainMenu
+    left = 160
+    top = 10
+    object FileU: TMenuItem
+      Caption = 'Файл'
+      object OPENF: TMenuItem
+        Caption = 'Открыть'
+        OnClick = OPENFClick
+      end
+      object SAVEF: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = SAVEFClick
+      end
+      object SAVEAS: TMenuItem
+        Caption = 'Сохранить отчёт'
+        OnClick = SAVEASClick
+      end
+    end
+    object HELPF: TMenuItem
+      Caption = 'Справка'
+      OnClick = HELPFClick
+    end
+    object CLOSEF: TMenuItem
+      Caption = 'Выход'
+      OnClick = CLOSEFClick
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    left = 189
+    top = 10
+  end
+  object SaveDialog1: TSaveDialog
+    left = 218
+    top = 10
+  end
+end
